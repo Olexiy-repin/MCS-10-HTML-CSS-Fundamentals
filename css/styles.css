@@ -1,0 +1,110 @@
+/*
+  Універсальний селектор
+  Селектор елемента(тега)
+  Селектор id
+  Селектор класа
+  Селектор нащадка
+  Дочірній селектор
+*/
+
+/* Універсальний селектор */
+/* 
+  * {
+    color: teal;
+  } 
+*/
+
+/* Селектор елемента(тега) */
+/* h1 {
+  color: teal;
+}
+
+p {
+  color: tomato;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+} */
+
+/* Селектор id */
+/* 
+#first-description,
+#second-description {
+  color: tomato;
+}
+
+#main-title {
+  color: teal;
+} */
+
+/* Селектор класа */
+/* .main-title {
+  color: teal;
+}
+
+.description {
+  color: tomato;
+} */
+
+/* Селектор нащадка */
+/* .section-title {
+  font-family: sans-serif;
+  font-size: 32px;
+  letter-spacing: 0.05em;
+} */
+
+/* .about-section-title {
+  color: tomato;
+}
+
+.benefits-section-title {
+  color: teal;
+} */
+
+/* .about .section-title {
+  color: tomato;
+}
+
+.benefits .section-title {
+  color: teal;
+} */
+
+/* Дочірній селектор */
+/* .menu > .item {
+  border: 1px solid teal;
+} */
+
+/* Каскадність, специфічність */
+/* .description {
+  font-size: 24px;
+  color: teal;
+}
+
+.description {
+  color: tomato;
+} */
+
+/* 1 */
+/* h1 {
+  color: teal;
+} */
+
+/* 10 */
+/* .main-title {
+  color: tomato;
+} */
+
+/* 100 */
+/* #main-title {
+  color: yellowgreen;
+} */
+
+/* 11 */
+/* body .main-title {
+  color: aqua;
+} */
