@@ -38,4 +38,12 @@ a {
   height: 50px;
   border-radius: 50%;
   background-color: #ffffff;
+  fill: #000000;
+  transition: background-color 1000ms linear, fill 1000ms linear;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: #000000;
+  fill: #ffffff;
 }
