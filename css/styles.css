@@ -165,8 +165,8 @@ body {
   padding-bottom: 40px;
   color: rgb(var(--secondary-text-color));
   background-color: rgb(30, 24, 35);
-  background-image: linear-gradient(#1e182366, #1e182366),
-    url('../images/hero/bg.jpg');
+  background-image:
+    linear-gradient(#1e182366, #1e182366), url('../images/hero/bg.jpg');
   background-size: cover;
   border-radius: 30px;
   margin-bottom: 72px;
@@ -201,7 +201,8 @@ body {
   color: rgb(var(--secondary-text-color));
   border: none;
   border-radius: 100px;
-  transition: color var(--transition-duration-and-func),
+  transition:
+    color var(--transition-duration-and-func),
     background-color var(--transition-duration-and-func);
 }
 
@@ -220,7 +221,8 @@ body {
   text-align: center;
   border: 1px solid #ffffff;
   border-radius: 100px;
-  transition: color var(--transition-duration-and-func),
+  transition:
+    color var(--transition-duration-and-func),
     border-color var(--transition-duration-and-func);
 }
 
@@ -257,7 +259,9 @@ body {
   background-color: #ffffff;
   fill: #fd9222;
 
-  transition: background-color 250ms linear, fill 250ms linear;
+  transition:
+    background-color 250ms linear,
+    fill 250ms linear;
 }
 
 .scroll-down-link:hover .scroll-down-icon-wrapper,
@@ -492,7 +496,8 @@ body {
   padding: 14px 40px;
   margin-left: auto;
   margin-right: auto;
-  transition: color var(--transition-duration-and-func),
+  transition:
+    color var(--transition-duration-and-func),
     background-color var(--transition-duration-and-func);
 }
 
@@ -559,3 +564,196 @@ body {
   margin-left: 0;
 }
 /* ============= /FOOTER STYLES ============= */
+
+/* ============= BACKDROP AND MODAL STYLES ============= */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 0.3);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-duration-and-func);
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 517px;
+  height: 794px;
+  border-radius: 15px;
+  background-color: rgb(250 250 250);
+  padding: 40px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  stroke: rgb(17 17 17);
+}
+
+.modal-slogan {
+  max-width: 298px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+/* ============= /BACKDROP AND MODAL STYLES ============= */
+
+/* ============= REVIEW FORM STYLES ============= */
+.review-form-field-wrapper {
+  margin-bottom: 18px;
+}
+
+.review-form-field-label {
+  display: block;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: rgb(64 64 64 / 0.3);
+  margin-bottom: 8px;
+}
+
+.review-form-input-wrapper {
+  position: relative;
+}
+
+/* .review-form-input-wrapper:focus-within .review-form-field-icon {
+  stroke: rgb(var(--accent-color));
+} */
+
+.review-form-field {
+  width: 100%;
+  height: 68px;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  border: 1px solid rgb(17 17 17 / 0.05);
+  border-radius: 15px;
+  background-color: transparent;
+  padding-left: 62px;
+  padding-right: 24px;
+  transition: border-color var(--transition-duration-and-func);
+}
+
+.review-form-field:focus {
+  outline: none;
+  border-color: rgb(var(--accent-color));
+}
+
+.review-form-field-icon {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  fill: none;
+  stroke: rgb(64 64 64);
+  transition: stroke var(--transition-duration-and-func);
+}
+
+.review-form-field:focus + .review-form-field-icon {
+  stroke: rgb(var(--accent-color));
+}
+
+.review-form-message {
+  width: 100%;
+  height: 137px;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  border: 1px solid rgb(17 17 17 / 0.05);
+  border-radius: 15px;
+  padding: 22px 24px;
+  background-color: transparent;
+  resize: none;
+  transition: border-color var(--transition-duration-and-func);
+}
+
+.review-form-message::placeholder {
+  color: rgb(64 64 64 / 0.3);
+}
+
+.review-form-message:focus {
+  outline: none;
+  border-color: rgb(var(--accent-color));
+}
+
+.review-form-checkbox-wrapper {
+  margin-bottom: 40px;
+}
+
+.review-form-checkbox-label {
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: rgb(64 64 64 / 0.6);
+}
+
+.review-form-custom-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(17 17 17 / 0.14);
+  border-radius: 6px;
+  fill: transparent;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.review-form-checkbox:checked
+  + .review-form-checkbox-label
+  .review-form-custom-checkbox {
+  background-color: rgb(var(--accent-color));
+  fill: rgb(255 255 255);
+}
+
+.review-form-checkbox:focus
+  + .review-form-checkbox-label
+  .review-form-custom-checkbox {
+  border-color: #2563eb;
+  box-shadow:
+    0 0 0 1px #2563eb,
+    0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+.privacy-policy-link {
+  text-decoration: underline;
+}
+
+.review-form-submit-btn {
+  min-width: 117px;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgb(255 255 255);
+  border-radius: 100px;
+  padding: 14px 16px;
+  border: none;
+  background-color: rgb(var(--accent-color));
+  transition:
+    background-color var(--transition-duration-and-func),
+    color var(--transition-duration-and-func);
+}
+
+.review-form-submit-btn:hover,
+.review-form-submit-btn:focus {
+  background-color: rgb(252 241 224);
+  color: rgb(var(--accent-color));
+}
+/* ============= /REVIEW FORM STYLES ============= */
