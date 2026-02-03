@@ -1,0 +1,132 @@
+body {
+  background-color: tomato;
+}
+
+/* @media screen {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1200px) {
+} */
+
+/* ========== MIN-WIDTH & MAX-WIDTH ========== */
+/* 400px+ */
+/* @media (min-width: 400px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* 400px+ */
+/* @media (width >= 400px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* 768px+ */
+/* @media (min-width: 768px) {
+  body {
+    background-color: yellowgreen;
+  }
+} */
+
+/* 768px+ */
+/* @media (width >= 768px) {
+  body {
+    background-color: yellowgreen;
+  }
+} */
+
+/* 0px - 1199px */
+/* @media (max-width: 1199px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* 0px - 1199px */
+/* @media (width < 1200px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* 0px - 767px */
+/* @media (max-width: 767px) {
+  body {
+    background-color: yellowgreen;
+  }
+} */
+
+/* 0px - 767px */
+/* @media (width < 768px) {
+  body {
+    background-color: yellowgreen;
+  }
+} */
+
+/* ========== TYPES ========== */
+/* 
+  all
+  screen
+  print
+*/
+
+/* @media print {
+  .menu {
+    display: none;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .page-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+} */
+
+/* 
+@media screen {
+  .page-section {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+} */
+
+/* ========== AND ========== */
+/* 
+768px+ = true
+0px - 1199px = true
+*/
+/* @media screen and (min-width: 768px) and (max-width: 1199px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* 
+768px+ = true
+0px - 1199px = true
+*/
+/* @media screen and (768px <= width < 1200px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* ========== OR ========== */
+/* 
+  0px - 767px = false
+  1200px+ = false
+*/
+
+/* @media (max-width: 767px), (min-width: 1200px) {
+  body {
+    background-color: teal;
+  }
+} */
